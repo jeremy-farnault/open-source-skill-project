@@ -14,3 +14,7 @@ Website project
 * The MVP only contains a way to create a project and link it to different tools, create a user, list skills and needs
 * Product owner can modify the project and highlight various data (issues, pr, trello cards etc)
 * User can sort the projects by skills needed to find where he/she can help
+
+## Stack
+* Use Auth0 for easy login integration
+* Use AWS to build/deploy
