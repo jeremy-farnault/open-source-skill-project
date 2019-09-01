@@ -17,7 +17,11 @@ export const App = memo(() => {
   return (
     <Provider store={store} key={'provider'}>
       <ApolloProvider client={client}>
-        <AppContainer />
+        <AppContainer>
+          <NavigationBar />
+          <TopBar />
+          <PageContent />
+        </AppContainer>
       </ApolloProvider>
     </Provider>
   )

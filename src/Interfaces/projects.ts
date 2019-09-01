@@ -8,3 +8,15 @@ export interface IProject {
   skillsNeeded: SkillsEnum[]
   userId: string
 }
+
+export enum LanguagesFrameworksEnum {
+  react,
+  reactNative,
+  typescript
+}
+
+export enum SkillsEnum {
+  designer,
+  developer,
+  tester
+}

@@ -1,4 +1,4 @@
-import { IProject } from '../Interfaces/projects'
+import { IProject, LanguagesFrameworksEnum, SkillsEnum } from '../Interfaces/projects'
 
 export const fakeProjects: IProject[] = [
   {
@@ -7,8 +7,8 @@ export const fakeProjects: IProject[] = [
     description: 'A PIN code component for react native',
     githubLink: 'https://github.com/jarden-digital/react-native-pincode',
     id: '1',
-    languagesFrameworks: ['1'],
-    skillsNeeded: ['1'],
+    languagesFrameworks: [LanguagesFrameworksEnum.reactNative],
+    skillsNeeded: [SkillsEnum.designer],
     userId: '1'
   }
 ]

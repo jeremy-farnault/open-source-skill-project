@@ -38,8 +38,14 @@ Website project
 ## Design
 
 - Categories like YP
-- Logged in page like GitHub
+- Logged in page like GitHub (with a dashboard)
 - List like Sens Critique with new, trending etc
+- Main page is
+  - Like the PMT and OV
+  - Navigation on a left panel
+  - Filters on a right panel
+  - Projects list at the center
+  - Top has a search bar and profile
 
 ## Resources
 
