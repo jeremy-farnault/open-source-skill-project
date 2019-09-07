@@ -5,6 +5,7 @@ export interface IProject {
   githubLink: string
   id: string
   languagesFrameworks: LanguagesFrameworksEnum[]
+  name: string
   skillsNeeded: SkillsEnum[]
   userId: string
 }
