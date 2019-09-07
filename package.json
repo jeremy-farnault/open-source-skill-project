@@ -10,8 +10,7 @@
     "start": "react-scripts start",
     "start:dev": "ENV_MODE=DEV react-scripts start",
     "start:prod": "ENV_MODE=PROD react-scripts start",
-    "start:test": "ENV_MODE=TEST react-scripts start",
-    "test": "react-scripts test"
+    "start:test": "ENV_MODE=TEST react-scripts start"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -33,30 +32,10 @@
       "pre-commit": "pretty-quick --staged"
     }
   },
-  "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx,ts,tsx}",
-      "!<rootDir>/node_modules/",
-      "!<rootDir>/build"
-    ],
-    "coverageThreshold": {
-      "global": {
-        "branches": 90,
-        "functions": 90,
-        "lines": 90,
-        "statements": 90
-      }
-    },
-    "coverageReporters": [
-      "text"
-    ],
-    "snapshotSerializers": []
-  },
   "dependencies": {
     "@apollo/react-hooks": "^3.0.0",
     "@testing-library/react": "^9.1.0",
     "@types/graphql": "^14.2.3",
-    "@types/jest": "24.0.17",
     "@types/lodash": "^4.14.136",
     "@types/node": "12.7.1",
     "@types/react": "16.9.1",
@@ -75,7 +54,6 @@
     "react-redux": "^7.1.0",
     "react-scripts": "3.1.0",
     "react-select": "^3.0.4",
-    "react-test-renderer": "^16.9.0",
     "react-virtualized": "^9.21.1",
     "redux": "^4.0.4",
     "redux-devtools-extension": "^2.13.8",
