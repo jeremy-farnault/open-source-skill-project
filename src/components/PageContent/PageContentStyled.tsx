@@ -21,7 +21,10 @@ const ProjectCard = styled.div`
   box-shadow: ${box.boxShadow};
   display: flex;
   flex-direction: column;
-  padding: ${sizes.size8};
+  margin-bottom: ${sizes.size32};
+  margin-left: ${sizes.size64};
+  margin-right: ${sizes.size64};
+  margin-top: ${sizes.size32};
 `
 ProjectCard.displayName = 'ProjectCard'
 
