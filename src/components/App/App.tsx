@@ -1,5 +1,6 @@
 import { ApolloProvider } from '@apollo/react-hooks'
 import ApolloClient from 'apollo-boost'
+import { withAuthenticator } from 'aws-amplify-react'
 import React, { memo } from 'react'
 import { Provider } from 'react-redux'
 import { NavigationBar, PageContent, TopBar } from '..'
@@ -14,7 +15,7 @@ export const client = new ApolloClient({
   uri: config.apolloClient
 })
 
-export const App = memo(() => {
+const AppContent = memo(() => {
   return (
     <Provider store={store} key={'provider'}>
       <ApolloProvider client={client}>
@@ -27,3 +28,5 @@ export const App = memo(() => {
     </Provider>
   )
 })
+
+export const App = withAuthenticator(AppContent, { includeGreetings: true })

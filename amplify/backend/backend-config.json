@@ -7,5 +7,19 @@
         "securityType": "API_KEY"
       }
     }
+  },
+  "function": {
+    "osskillprojectf095c962DefineAuthChallenge": {
+      "service": "Lambda",
+      "providerPlugin": "awscloudformation",
+      "build": true
+    }
+  },
+  "auth": {
+    "osskillproject71ff8ab4": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": []
+    }
   }
 }

@@ -1,0 +1,12 @@
+{
+  "trigger": true,
+  "modules": ["captcha-define-challenge"],
+  "parentResource": "osskillprojectf095c962",
+  "functionName": "osskillprojectf095c962DefineAuthChallenge",
+  "parentStack": "auth",
+  "triggerEnvs": "[]",
+  "triggerTemplate": "DefineAuthChallenge.json.ejs",
+  "roleName": "osskillprojectf095c962DefineAuthChallenge",
+  "skipEdit": true,
+  "resourceName": "osskillprojectf095c962DefineAuthChallenge"
+}

@@ -9,6 +9,14 @@
       "UnauthRoleName": "os-skillproject-dev-20190914154000-unauthRole",
       "StackName": "os-skillproject-dev-20190914154000",
       "StackId": "arn:aws:cloudformation:ap-southeast-2:479926488096:stack/os-skillproject-dev-20190914154000/5460cea0-d6a1-11e9-a948-06d8fa8d4244"
+    },
+    "categories": {
+      "function": {
+        "osskillprojectf095c962DefineAuthChallenge": {}
+      },
+      "auth": {
+        "osskillproject71ff8ab4": {}
+      }
     }
   }
 }
