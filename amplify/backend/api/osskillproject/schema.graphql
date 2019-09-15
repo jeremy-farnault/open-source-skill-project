@@ -1,16 +1,92 @@
-type Blog @model {
+type Category @model {
   id: ID!
-  name: String!
-  posts: [Post] @connection(name: "BlogPosts")
+  name: String
+  projects: [ProjectCategory] @connection(name: "CategorieProjects")
 }
-type Post @model {
+
+type LanguageFramework @model {
   id: ID!
-  title: String!
-  blog: Blog @connection(name: "BlogPosts")
-  comments: [Comment] @connection(name: "PostComments")
+  name: String
+  projects: [ProjectLanguageFramework] @connection(name: "LanguageFrameworkProjects")
+  users: [UserLanguageFramework] @connection(name: "LanguageFrameworkUsers")
 }
-type Comment @model {
+
+type PersonalLinks {
+  github: String
+  gitlab: String
+  linkedin: String
+  website: String
+}
+
+type Project @model {
+  categories: [ProjectCategory] @connection(name: "ProjectCategories")
+  collaborators: [ProjectCollaborator] @connection(name: "ProjectCollaborators")
+  collaboratorsNeeded: Boolean
+  description: String
+  githubLink: String
   id: ID!
-  content: String
-  post: Post @connection(name: "PostComments")
+  languagesFrameworks: [ProjectLanguageFramework] @connection(name: "ProjectLanguagesFrameworks")
+  name: String
+  owner: User @connection(name: "ProjectOwner")
+  skillsNeeded: [ProjectSkill] @connection(name: "ProjectSkills")
+}
+
+type ProjectCategory @model(queries: null) {
+  id: ID!
+  category: Category! @connection(name: "CategorieProjects")
+  project: Project! @connection(name: "ProjectCategories")
+}
+
+type ProjectCollaborator @model(queries: null) {
+  id: ID!
+  collaborator: User! @connection(name: "CollaboratorProjects")
+  project: Project! @connection(name: "ProjectCollaborators")
+}
+
+type ProjectLanguageFramework @model(queries: null) {
+  id: ID!
+  languageFramework: LanguageFramework! @connection(name: "LanguageFrameworkProjects")
+  project: Project! @connection(name: "ProjectLanguagesFrameworks")
+}
+
+type ProjectSkill @model(queries: null) {
+  id: ID!
+  project: Project! @connection(name: "ProjectSkills")
+  skill: Skill! @connection(name: "SkillProjects")
+}
+
+type Settings {
+  newsletter: Boolean
+}
+
+type Skill @model {
+  id: ID!
+  name: String
+  projects: [ProjectSkill] @connection(name: "SkillProjects")
+  users: [UserSkill] @connection(name: "SkillUsers")
+}
+
+type User @model {
+  emailAddress: String
+  id: ID!
+  languages: [String]
+  languagesFrameworks: [UserLanguageFramework] @connection(name: "UserLanguagesFrameworks")
+  links: PersonalLinks
+  name: String
+  projectsCollab: [ProjectCollaborator] @connection(name: "CollaboratorProjects")
+  projectOwned: [Project] @connection(name: "ProjectOwner")
+  settings: Settings
+  skills: [UserSkill] @connection(name: "UserSkills")
+}
+
+type UserLanguageFramework @model(queries: null) {
+  id: ID!
+  languageFramework: LanguageFramework! @connection(name: "LanguageFrameworkUsers")
+  user: User! @connection(name: "UserLanguagesFrameworks")
+}
+
+type UserSkill @model(queries: null) {
+  id: ID!
+  skill: Skill! @connection(name: "SkillUsers")
+  user: User! @connection(name: "UserSkills")
 }
